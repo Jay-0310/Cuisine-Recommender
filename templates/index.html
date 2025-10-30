@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisine Recommender</title>
+    <style>
+        :root {
+            --bg-color-light: #f4f7f6;
+            --text-color-light: #333;
+            --container-bg-light: #ffffff;
+            --input-bg-light: #fafafa;
+            --input-border-light: #ddd;
+            --shadow-light: 0 8px 24px rgba(0, 0, 0, 0.05);
+            --text-muted-light: #777;
+            
+            --bg-color-dark: #121212;
+            --text-color-dark: #e0e0e0;
+            --container-bg-dark: #1e1e1e;
+            --input-bg-dark: #2c2c2c;
+            --input-border-dark: #444;
+            --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.3);
+            --text-muted-dark: #888;
+            
+            --primary-blue: #007bff;
+            --primary-blue-hover: #0056b3;
+            
+            /* Card Colors */
+            --card-1-bg: linear-gradient(135deg, #28b485, #2ecc71);
+            --card-1-shadow: rgba(46, 204, 113, 0.3);
+            --card-2-bg: linear-gradient(135deg, #3498db, #2980b9);
+            --card-2-shadow: rgba(52, 152, 219, 0.3);
+            --card-3-bg: linear-gradient(135deg, #f39c12, #e67e22);
+            --card-3-shadow: rgba(243, 156, 18, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            background-color: var(--container-bg-light);
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .header-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- New Diet Toggle --- */
+        .diet-toggle {
+            display: flex;
+            background-color: var(--input-bg-light);
+            border: 1px solid var(--input-border-light);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .diet-toggle input {
+            display: none;
+        }
+        .diet-toggle label {
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-weight: 500;
+            margin: 0;
+            color: var(--text-muted-light);
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .diet-toggle input:checked + label {
+            background-color: var(--primary-blue);
+            color: #fff;
+        }
+
+        /* --- Dark Mode Toggle --- */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        .theme-switch {
+            display: inline-block;
+            height: 24px;
+            position: relative;
+            width: 44px;
+        }
+        .theme-switch input { display:none; }
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 16px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 16px;
+            border-radius: 50%;
+        }
+        input:checked + .slider { background-color: var(--primary-blue); }
+        input:checked + .slider:before { transform: translateX(20px); }
+
+        h1 {
+            text-align: center;
+            color: var(--text-color-light);
+            margin: 0 0 0.5rem 0;
+            transition: color 0.3s;
+        }
+        .subtitle {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2rem;
+            color: var(--text-muted-light);
+            transition: color 0.3s;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-color-light);
+            transition: color 0.3s;
+        }
+
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid var(--input-border-light);
+            border-radius: 8px;
+            background-color: var(--input-bg-light);
+            color: var(--text-color-light);
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        /* Full width button */
+        .form-full-width {
+            grid-column: 1 / -1;
+        }
+        button {
+            background-color: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            width: 100%;
+        }
+        button:hover { background-color: var(--primary-blue-hover); }
+        button:disabled { background-color: #555; cursor: not-allowed; }
+
+        /* --- Result Card CSS --- */
+        #result {
+            margin-top: 2rem;
+            display: none;
+        }
+        #result h2 {
+            text-align: center;
+            color: var(--text-color-light);
+            margin-bottom: 1.5rem;
+            transition: color 0.3s;
+        }
+        .rec-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .rec-card {
+            color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px var(--card-1-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        /* Card Colors */
+        .rec-card.first { background: var(--card-1-bg); box-shadow: 0 10px 20px var(--card-1-shadow); }
+        .rec-card.second { background: var(--card-2-bg); box-shadow: 0 10px 20px var(--card-2-shadow); }
+        .rec-card.third { background: var(--card-3-bg); box-shadow: 0 10px 20px var(--card-3-shadow); }
+        
+        .rec-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .rec-medal {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+        .first .rec-medal { background: #FFD700; color: #8C6A00; }
+        .second .rec-medal { background: #C0C0C0; color: #5A5A5A; }
+        .third .rec-medal { background: #CD7F32; color: #5D3A17; }
+        
+        .rec-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .rec-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            opacity: 0.9;
+            margin: 0;
+            transition: margin 0.3s ease;
+        }
+
+        /* --- Clickable Card Logic --- */
+        .dish-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease;
+        }
+        .dish-list li {
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Active (Clicked) Card State */
+        .rec-card.active {
+            transform: scale(1.03); /* Slightly larger */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .rec-card.active .dish-list {
+            max-height: 200px; /* Reveal the list */
+            opacity: 1;
+        }
+        .rec-card.active .rec-description {
+            margin-bottom: 1rem; /* Add space for the list */
+        }
+        /* --- End Clickable Card --- */
+
+        /* Error styling */
+        .error {
+            background-color: #fff0f0;
+            border: 1px solid #ffb3b3;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        .error h3 { color: #d8000c; margin-top: 0; }
+        .error p { font-size: 1rem; font-weight: normal; color: #d8000c; margin-bottom: 0; }
+
+        /* --- Dark Mode Styles --- */
+        body.dark-mode { background-color: var(--bg-color-dark); color: var(--text-color-dark); }
+        body.dark-mode .container { background-color: var(--container-bg-dark); box-shadow: var(--shadow-dark); }
+        body.dark-mode h1, body.dark-mode #result h2 { color: var(--text-color-dark); }
+        body.dark-mode .subtitle { color: var(--text-muted-dark); }
+        body.dark-mode label { color: var(--text-color-dark); }
+        body.dark-mode select { background-color: var(--input-bg-dark); border-color: var(--input-border-dark); color: var(--text-color-dark); }
+        body.dark-mode .diet-toggle { background-color: var(--input-bg-dark); border-color: var(--input-border-dark); }
+        body.dark-mode .diet-toggle label { color: var(--text-muted-dark); }
+        body.dark-mode .diet-toggle input:checked + label { background-color: var(--primary-blue); color: #fff; }
+        body.dark-mode .error { background-color: #4d2f2f; border: 1px solid #a83c3c; }
+        body.dark-mode .error h3, body.dark-mode .error p { color: #ff8c8c; }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            form, .rec-container {
+                grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+            }
+            .form-full-width { grid-column: 1 / -1; }
+        }
+        @media (max-width: 600px) {
+            form, .rec-container {
+                grid-template-columns: 1fr; /* 1 column on mobile */
+            }
+            .header-controls { flex-direction: column; gap: 1rem; }
+            .diet-toggle { width: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+            .diet-toggle label { text-align: center; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header-controls">
+            <div class="diet-toggle" id="dietToggle">
+                <input type="radio" id="diet-veg" name="diet_type" value="Veg" checked>
+                <label for="diet-veg">Veg Only</label>
+                
+                <input type="radio" id="diet-nonveg" name="diet_type" value="Non-Veg">
+                <label for="diet-nonveg">Non-Veg Only</label>
+                
+                <input type="radio" id="diet-both" name="diet_type" value="Both">
+                <label for="diet-both">Both</label>
+            </div>
+            
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider"></div>
+                </label>
+            </div>
+        </div>
+
+        <h1>Find Your Perfect Cuisine</h1>
+        <p class="subtitle">Select your preferences below to get a recommendation.</p>
+
+        <form id="cuisineForm">
+            <div class="form-group">
+                <label for="hunger">How hungry are you?</label>
+                <select id="hunger" name="hunger" required>
+                    <option value="" disabled selected>-- Select hunger level --</option>
+                    <option value="Light Snack">Light Snack</option>
+                    <option value="Moderate Meal">Moderate Meal</option>
+                    <option value="Very Hungry">Very Hungry</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="spice">What's your spice preference?</label>
+                <select id="spice" name="spice" required>
+                    <option value="" disabled selected>-- Select spice level --</option>
+                    <option value="No Spice">No Spice</option>
+                    <option value="Mild">Mild</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Spicy">Spicy</option>
+                    <option value="Very Spicy">Very Spicy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="flavor">What flavor profile do you want?</label>
+                <select id="flavor" name="flavor" required>
+                    <option value="" disabled selected>-- Select flavor profile --</option>
+                    <option value="Creamy / Rich">Creamy / Rich</option>
+                    <option value="Light / Fresh">Light / Fresh</option>
+                    <option value="Savory / Umami">Savory / Umami</option>
+                    <option value="Sweet">Sweet</option>
+                    <option value="Tangy / Sour">Tangy / Sour</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="occasion">What's the occasion?</label>
+                <select id="occasion" name="occasion" required>
+                    <option value="" disabled selected>-- Select occasion --</option>
+                    <option value="Casual Weeknight">Casual Weeknight</option>
+                    <option value="Comfort Food">Comfort Food</option>
+                    <option value="Experimental">Experimental</option>
+                    <option value="Healthy / Low-Calorie">Healthy / Low-Calorie</option>
+                    <option value="Quick & Easy">Quick & Easy</option>
+                    <option value="Special Occasion">Special Occasion</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="component">What's the main component?</label>
+                <select id="component" name="component" required>
+                    <option value="" disabled selected>-- Select main component --</option>
+                    <option value="Bread-based" data-diet="veg">Bread-based</option>
+                    <option value="Lentils / Beans" data-diet="veg">Lentils / Beans</option>
+                    <option value="Mainly Vegetables" data-diet="veg">Mainly Vegetables</option>
+                    <option value="Noodles / Pasta" data-diet="veg">Noodles / Pasta</option>
+                    <option value="Paneer / Tofu" data-diet="veg">Paneer / Tofu</option>
+                    <option value="Rice-based" data-diet="veg">Rice-based</option>
+                    <option value="Chicken" data-diet="non-veg">Chicken</option>
+                    <option value="Fish" data-diet="non-veg">Fish</option>
+                    <option value="Mutton" data-diet="non-veg">Mutton</option>
+                    <option value="Prawns" data-diet="non-veg">Prawns</option>
+                </select>
+            </div>
+            
+            <div class="form-full-width">
+                <button type="submit">Get Recommendations</button>
+            </div>
+        </form>
+
+        <div id="result">
+            </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            
+            const form = document.getElementById("cuisineForm");
+            const resultDiv = document.getElementById("result");
+            const submitButton = form.querySelector("button[type='submit']");
+            const toggleSwitch = document.getElementById('checkbox');
+            const dietToggle = document.getElementById('dietToggle');
+            const componentSelect = document.getElementById('component');
+
+            // --- Dark Mode Logic ---
+            function setDarkMode(isDark) {
+                document.body.classList.toggle('dark-mode', isDark);
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                toggleSwitch.checked = isDark;
+            }
+
+            const currentTheme = localStorage.getItem('theme');
+            if (currentTheme) {
+                setDarkMode(currentTheme === 'dark');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                setDarkMode(true);
+            }
+
+            toggleSwitch.addEventListener('change', (e) => setDarkMode(e.target.checked));
+
+            // --- Diet Filter Logic ---
+            function filterComponentDropdown() {
+                const selectedDiet = document.querySelector('input[name="diet_type"]:checked').value;
+                let firstVisibleOption = null;
+
+                for (let option of componentSelect.options) {
+                    const diet = option.getAttribute('data-diet');
+                    if (diet) { // Skip the "-- Select --" option
+                        if (selectedDiet === 'Both' || (selectedDiet === 'Veg' && diet === 'veg') || (selectedDiet === 'Non-Veg' && diet === 'non-veg')) {
+                            option.style.display = 'block';
+                            if (!firstVisibleOption) {
+                                firstVisibleOption = option;
+                            }
+                        } else {
+                            option.style.display = 'none';
+                            if (option.selected) {
+                                // If the selected option is now hidden, reset the dropdown
+                                componentSelect.value = "";
+                            }
+                        }
+                    }
+                }
+            }
+            
+            dietToggle.addEventListener('change', filterComponentDropdown);
+            // Run on load
+            filterComponentDropdown();
+
+            // --- Form Submission Logic ---
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const formData = {
+                    diet_type: document.querySelector('input[name="diet_type"]:checked').value,
+                    hunger: document.getElementById("hunger").value,
+                    spice: document.getElementById("spice").value,
+                    flavor: document.getElementById("flavor").value,
+                    occasion: document.getElementById("occasion").value,
+                    component: document.getElementById("component").value
+                };
+
+                // Check for empty component
+                if (!formData.component) {
+                    resultDiv.innerHTML = `<div class="error"><h3>Error:</h3><p>Please select a main component.</p></div>`;
+                    resultDiv.style.display = "block";
+                    return;
+                }
+
+                resultDiv.innerHTML = "<h3>Finding your perfect cuisine...</h3>";
+                resultDiv.className = "";
+                resultDiv.style.display = "block";
+                submitButton.disabled = true;
+
+                fetch('/recommend', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData),
+                })
+                .then(response => response.json().then(data => ({ok: response.ok, data})))
+                .then(({ok, data}) => {
+                    if (!ok) {
+                        throw new Error(data.error || "Server error");
+                    }
+
+                    if (data.recommendations && data.recommendations.length > 0) {
+                        resultDiv.innerHTML = ""; // Clear loading
+                        
+                        const title = document.createElement('h2');
+                        title.textContent = "Your Top 3 Recommendations";
+                        resultDiv.appendChild(title);
+                        
+                        const cardContainer = document.createElement('div');
+                        cardContainer.className = 'rec-container';
+                        
+                        const cardClasses = ['first', 'second', 'third'];
+                        
+                        data.recommendations.forEach((item, index) => {
+                            const card = document.createElement('div');
+                            card.className = `rec-card ${cardClasses[index]}`;
+                            
+                            // Build dish list HTML
+                            let dishListHTML = '<ul class="dish-list">';
+                            item.dishes.forEach(dish => {
+                                dishListHTML += `<li>${dish}</li>`;
+                            });
+                            dishListHTML += '</ul>';
+
+                            card.innerHTML = `
+                                <div class="rec-header">
+                                    <div class="rec-medal">${index + 1}</div>
+                                    <h3 class="rec-title">${item.cuisine}</h3>
+                                </div>
+                                <p class="rec-description">${item.description}</p>
+                                ${dishListHTML}
+                            `;
+                            cardContainer.appendChild(card);
+                        });
+                        
+                        resultDiv.appendChild(cardContainer);
+                    } else {
+                        // This error now means the model *and* the fallback found nothing
+                        throw new Error("No recommendations found for these specific criteria. Try a different combination!");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultDiv.innerHTML = `<div class="error"><h3>Error:</h3><p>${error.message}</p></div>`;
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                });
+            });
+
+            // --- Card Click Logic (Event Delegation) ---
+            resultDiv.addEventListener('click', function(e) {
+                const clickedCard = e.target.closest('.rec-card');
+                
+                if (!clickedCard) {
+                    // If user clicks outside a card, close all
+                    document.querySelectorAll('.rec-card.active').forEach(card => {
+                        card.classList.remove('active');
+                    });
+                    return;
+                }
+
+                // If it's already active, deactivate it
+                if (clickedCard.classList.contains('active')) {
+                    clickedCard.classList.remove('active');
+                } else {
+                    // Deactivate all others
+                    document.querySelectorAll('.rec-card.active').forEach(card => {
+                        card.classList.remove('active');
+                    });
+                    // Activate the clicked one
+                    clickedCard.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

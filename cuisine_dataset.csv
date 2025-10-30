@@ -1,0 +1,233 @@
+diet_type,hunger,spice,flavor,occasion,component,cuisine,dish
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Mainly Vegetables,Punjabi,Aloo Gobi
+Veg,Very Hungry,Spicy,Creamy / Rich,Special Occasion,Paneer / Tofu,Punjabi,Paneer Tikka Masala
+Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Lentils / Beans,Punjabi,Dal Makhani
+Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Lentils / Beans,Punjabi,Chana Masala
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Paneer / Tofu,Punjabi,Shahi Paneer
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Special Occasion,Chicken,Punjabi,Butter Chicken
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Chicken,Punjabi,Chicken Tikka Masala
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Special Occasion,Mutton,Punjabi,Rogan Josh
+Veg,Moderate Meal,Mild,Savory / Umami,Casual Weeknight,Bread-based,Italian,Margherita Pizza
+Veg,Very Hungry,Mild,Creamy / Rich,Comfort Food,Noodles / Pasta,Italian,Fettuccine Alfredo
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Noodles / Pasta,Italian,Arrabbiata Pasta
+Veg,Moderate Meal,Mild,Light / Fresh,Experimental,Noodles / Pasta,Italian,Pesto Pasta
+Veg,Very Hungry,Mild,Creamy / Rich,Comfort Food,Rice-based,Italian,Mushroom Risotto
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Italian,Chicken Pepperoni Pizza
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Special Occasion,Chicken,Italian,Chicken Lasagna
+Non-Veg,Moderate Meal,Medium,Light / Fresh,Healthy / Low-Calorie,Fish,Italian,Grilled Fish with Lemon
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Veg Burrito
+Veg,Light Snack,Medium,Savory / Umami,Quick & Easy,Mainly Vegetables,Mexican,Veggie Quesadilla
+Veg,Very Hungry,Very Spicy,Tangy / Sour,Experimental,Lentils / Beans,Mexican,Spicy Bean Chilli
+Veg,Light Snack,Spicy,Savory / Umami,Special Occasion,Lentils / Beans,Mexican,Bean and Cheese Nachos
+Non-Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Tacos
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Mutton,Mexican,Beef Burrito Bowl
+Non-Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Fish,Mexican,Fish Tacos
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Noodles / Pasta,Indo-Chinese,Veg Hakka Noodles
+Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Mainly Vegetables,Indo-Chinese,Gobi Manchurian
+Veg,Moderate Meal,Very Spicy,Savory / Umami,Casual Weeknight,Paneer / Tofu,Indo-Chinese,Chilli Paneer
+Veg,Light Snack,Mild,Savory / Umami,Quick & Easy,Mainly Vegetables,Indo-Chinese,Spring Roll
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Chilli Chicken
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Chicken,Indo-Chinese,Chicken Hakka Noodles
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Special Occasion,Prawns,Indo-Chinese,Chilli Prawns
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Lentils / Beans,Mediterranean,Falafel Platter
+Veg,Light Snack,Mild,Light / Fresh,Quick & Easy,Bread-based,Mediterranean,Hummus with Pita
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Greek Salad
+Non-Veg,Moderate Meal,Mild,Light / Fresh,Comfort Food,Chicken,Mediterranean,Chicken Shawarma
+Non-Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Mutton,Mediterranean,Lamb Kofta
+Veg,Light Snack,Mild,Light / Fresh,Healthy / Low-Calorie,Lentils / Beans,South Indian,Idli Sambar
+Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Lentils / Beans,South Indian,Masala Dosa
+Veg,Very Hungry,Medium,Tangy / Sour,Comfort Food,Rice-based,South Indian,Curd Rice
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Rice-based,South Indian,Bisi Bele Bath
+Non-Veg,Moderate Meal,Spicy,Tangy / Sour,Special Occasion,Fish,South Indian,Fish Curry
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Special Occasion,Chicken,South Indian,Hyderabadi Chicken Biryani
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Mainly Vegetables,Thai,Veg Green Curry
+Veg,Very Hungry,Mild,Light / Fresh,Healthy / Low-Calorie,Noodles / Pasta,Thai,Veg Pad Thai
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Thai,Chicken Green Curry
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Experimental,Prawns,Thai,Tom Yum Soup
+Veg,Light Snack,Mild,Sweet,Quick & Easy,Mainly Vegetables,Gujarati,Khandvi
+Veg,Light Snack,Mild,Tangy / Sour,Quick & Easy,Lentils / Beans,Gujarati,Dhokla
+Veg,Very Hungry,Mild,Sweet,Comfort Food,Lentils / Beans,Gujarati,Gujarati Thali
+Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Pani Puri
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Samosa Chaat
+Veg,Light Snack,Medium,Sweet,Comfort Food,Mainly Vegetables,Chaat,Dahi Puri
+Veg,Light Snack,Spicy,Tangy / Sour,Casual Weeknight,Mainly Vegetables,Chaat,Bhel Puri
+Veg,Moderate Meal,Mild,Savory / Umami,Comfort Food,Rice-based,Japanese (Veg),Veg Sushi
+Veg,Very Hungry,Medium,Savory / Umami,Comfort Food,Noodles / Pasta,Japanese (Veg),Veg Udon
+Veg,Moderate Meal,Spicy,Sweet,Experimental,Paneer / Tofu,Korean (Veg),Spicy Tofu
+Non-Veg,Moderate Meal,Spicy,Sweet,Experimental,Chicken,Korean (Veg),Korean Fried Chicken
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Mainly Vegetables,Continental,Veg Au Gratin
+Non-Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Chicken,Continental,Chicken Stroganoff
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Healthy / Low-Calorie,Fish,Continental,Grilled Salmon
+Veg,Light Snack,Mild,Light / Fresh,Quick & Easy,Bread-based,Sandwich,Veg Sandwich
+Non-Veg,Light Snack,Medium,Savory / Umami,Quick & Easy,Chicken,Sandwich,Chicken Club Sandwich
+Veg,Light Snack,Medium,Savory / Umami,Casual Weeknight,Bread-based,Italian,Margherita Pizza
+Non-Veg,Light Snack,Medium,Savory / Umami,Casual Weeknight,Chicken,Italian,Chicken Pepperoni Pizza
+Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Rice-based,Mughlai (Veg),Veg Biryani
+Non-Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Mutton,Mughlai (Veg),Mutton Biryani
+Veg,Moderate Meal,Medium,Creamy / Rich,Special Occasion,Paneer / Tofu,Mughlai (Veg),Paneer Lababdar
+Non-Veg,Moderate Meal,Medium,Creamy / Rich,Special Occasion,Chicken,Mughlai (Veg),Murgh Musallam
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,South Indian,Sambar Vada
+Veg,Moderate Meal,Medium,Tangy / Sour,Healthy / Low-Calorie,Rice-based,South Indian,Lemon Rice
+Non-Veg,Very Hungry,Very Spicy,Savory / Umami,Comfort Food,Chicken,South Indian,Chicken Chettinad
+Veg,Moderate Meal,Medium,Creamy / Rich,Comfort Food,Paneer / Tofu,Punjabi,Palak Paneer
+Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Rice-based,Punjabi,Tawa Pulao
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Punjabi,Kadai Chicken
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Noodles / Pasta,Italian,Macaroni and Cheese
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Noodles / Pasta,Italian,Spaghetti Bolognese
+Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Rajma Tacos
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Enchiladas
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Rice-based,Indo-Chinese,Veg Fried Rice
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Chicken Fried Rice
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Prawns,Indo-Chinese,Prawn Fried Rice
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Quinoa Salad
+Non-Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Chicken,Mediterranean,Chicken Souvlaki
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Rice-based,Thai,Thai Veg Fried Rice
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Thai,Thai Chicken Fried Rice
+Veg,Moderate Meal,Mild,Light / Fresh,Quick & Easy,Lentils / Beans,Gujarati,Khandvi
+Veg,Moderate Meal,Mild,Sweet,Comfort Food,Bread-based,Maharashtrian,Puran Poli
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Sev Puri
+Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Rice-based,Japanese (Veg),Edamame Rice
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Noodles / Pasta,Korean (Veg),Gochujang Pasta
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Korean (Veg),Dak Galbi
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Mainly Vegetables,Continental,Cream of Mushroom Soup
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Fish,Continental,Fish and Chips
+Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Bread-based,Sandwich,Grilled Cheese
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Chicken,Sandwich,Chicken Tikka Sandwich
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Paneer / Tofu,Mughlai (Veg),Malai Kofta
+Non-Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Chicken,Mughlai (Veg),Murgh Korma
+Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Lentils / Beans,Punjabi,Dal Makhani
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Chicken,Punjabi,Butter Chicken
+Veg,Moderate Meal,Medium,Creamy / Rich,Casual Weeknight,Noodles / Pasta,Italian,Carbonara (Veg)
+Non-Veg,Moderate Meal,Medium,Creamy / Rich,Casual Weeknight,Noodles / Pasta,Italian,Carbonara
+Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Chipotle Bean Bowl
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Burrito Bowl
+Veg,Very Hungry,Spicy,Savory / Umami,Casual Weeknight,Rice-based,Indo-Chinese,Schezwan Fried Rice
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Schezwan Chicken
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Tabouleh
+Non-Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Fish,Mediterranean,Baked Cod
+Veg,Very Hungry,Spicy,Tangy / Sour,Comfort Food,Rice-based,South Indian,Tamarind Rice
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Chicken,South Indian,Chicken 65
+Veg,Moderate Meal,Spicy,Creamy / Rich,Experimental,Rice-based,Thai,Thai Green Curry Fried Rice
+Non-Veg,Moderate Meal,Spicy,Creamy / Rich,Experimental,Prawns,Thai,Prawn Green Curry
+Veg,Moderate Meal,Mild,Sweet,Comfort Food,Lentils / Beans,Gujarati,Gujarati Kadhi
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Bread-based,Chaat,Dahi Vada
+Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Noodles / Pasta,Japanese (Veg),Miso Ramen
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Noodles / Pasta,Korean (Veg),Japchae (with beef)
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Rice-based,Continental,Baked Veg
+Non-Veg,Moderate Meal,Mild,Savory / Umami,Comfort Food,Chicken,Continental,Roast Chicken
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Mainly Vegetables,Punjabi,Aloo Gobi
+Veg,Very Hungry,Spicy,Creamy / Rich,Special Occasion,Paneer / Tofu,Punjabi,Paneer Tikka Masala
+Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Lentils / Beans,Punjabi,Dal Makhani
+Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Lentils / Beans,Punjabi,Chana Masala
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Paneer / Tofu,Punjabi,Shahi Paneer
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Special Occasion,Chicken,Punjabi,Butter Chicken
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Chicken,Punjabi,Chicken Tikka Masala
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Special Occasion,Mutton,Punjabi,Rogan Josh
+Veg,Moderate Meal,Mild,Savory / Umami,Casual Weeknight,Bread-based,Italian,Margherita Pizza
+Veg,Very Hungry,Mild,Creamy / Rich,Comfort Food,Noodles / Pasta,Italian,Fettuccine Alfredo
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Noodles / Pasta,Italian,Arrabbiata Pasta
+Veg,Moderate Meal,Mild,Light / Fresh,Experimental,Noodles / Pasta,Italian,Pesto Pasta
+Veg,Very Hungry,Mild,Creamy / Rich,Comfort Food,Rice-based,Italian,Mushroom Risotto
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Italian,Chicken Pepperoni Pizza
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Special Occasion,Chicken,Italian,Chicken Lasagna
+Non-Veg,Moderate Meal,Medium,Light / Fresh,Healthy / Low-Calorie,Fish,Italian,Grilled Fish with Lemon
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Veg Burrito
+Veg,Light Snack,Medium,Savory / Umami,Quick & Easy,Mainly Vegetables,Mexican,Veggie Quesadilla
+Veg,Very Hungry,Very Spicy,Tangy / Sour,Experimental,Lentils / Beans,Mexican,Spicy Bean Chilli
+Veg,Light Snack,Spicy,Savory / Umami,Special Occasion,Lentils / Beans,Mexican,Bean and Cheese Nachos
+Non-Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Tacos
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Mutton,Mexican,Beef Burrito Bowl
+Non-Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Fish,Mexican,Fish Tacos
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Noodles / Pasta,Indo-Chinese,Veg Hakka Noodles
+Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Mainly Vegetables,Indo-Chinese,Gobi Manchurian
+Veg,Moderate Meal,Very Spicy,Savory / Umami,Casual Weeknight,Paneer / Tofu,Indo-Chinese,Chilli Paneer
+Veg,Light Snack,Mild,Savory / Umami,Quick & Easy,Mainly Vegetables,Indo-Chinese,Spring Roll
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Chilli Chicken
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Chicken,Indo-Chinese,Chicken Hakka Noodles
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Special Occasion,Prawns,Indo-Chinese,Chilli Prawns
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Lentils / Beans,Mediterranean,Falafel Platter
+Veg,Light Snack,Mild,Light / Fresh,Quick & Easy,Bread-based,Mediterranean,Hummus with Pita
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Greek Salad
+Non-Veg,Moderate Meal,Mild,Light / Fresh,Comfort Food,Chicken,Mediterranean,Chicken Shawarma
+Non-Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Mutton,Mediterranean,Lamb Kofta
+Veg,Light Snack,Mild,Light / Fresh,Healthy / Low-Calorie,Lentils / Beans,South Indian,Idli Sambar
+Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Lentils / Beans,South Indian,Masala Dosa
+Veg,Very Hungry,Medium,Tangy / Sour,Comfort Food,Rice-based,South Indian,Curd Rice
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Rice-based,South Indian,Bisi Bele Bath
+Non-Veg,Moderate Meal,Spicy,Tangy / Sour,Special Occasion,Fish,South Indian,Fish Curry
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Special Occasion,Chicken,South Indian,Hyderabadi Chicken Biryani
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Mainly Vegetables,Thai,Veg Green Curry
+Veg,Very Hungry,Mild,Light / Fresh,Healthy / Low-Calorie,Noodles / Pasta,Thai,Veg Pad Thai
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Thai,Chicken Green Curry
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Experimental,Prawns,Thai,Tom Yum Soup
+Veg,Light Snack,Mild,Sweet,Quick & Easy,Mainly Vegetables,Gujarati,Khandvi
+Veg,Light Snack,Mild,Tangy / Sour,Quick & Easy,Lentils / Beans,Gujarati,Dhokla
+Veg,Very Hungry,Mild,Sweet,Comfort Food,Lentils / Beans,Gujarati,Gujarati Thali
+Veg,Light Snack,Spicy,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Pani Puri
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Samosa Chaat
+Veg,Light Snack,Medium,Sweet,Comfort Food,Mainly Vegetables,Chaat,Dahi Puri
+Veg,Light Snack,Spicy,Tangy / Sour,Casual Weeknight,Mainly Vegetables,Chaat,Bhel Puri
+Veg,Moderate Meal,Mild,Savory / Umami,Comfort Food,Rice-based,Japanese (Veg),Veg Sushi
+Veg,Very Hungry,Medium,Savory / Umami,Comfort Food,Noodles / Pasta,Japanese (Veg),Veg Udon
+Veg,Moderate Meal,Spicy,Sweet,Experimental,Paneer / Tofu,Korean (Veg),Spicy Tofu
+Non-Veg,Moderate Meal,Spicy,Sweet,Experimental,Chicken,Korean (Veg),Korean Fried Chicken
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Mainly Vegetables,Continental,Veg Au Gratin
+Non-Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Chicken,Continental,Chicken Stroganoff
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Healthy / Low-Calorie,Fish,Continental,Grilled Salmon
+Veg,Light Snack,Mild,Light / Fresh,Quick & Easy,Bread-based,Sandwich,Veg Sandwich
+Non-Veg,Light Snack,Medium,Savory / Umami,Quick & Easy,Chicken,Sandwich,Chicken Club Sandwich
+Veg,Light Snack,Medium,Savory / Umami,Casual Weeknight,Bread-based,Italian,Margherita Pizza
+Non-Veg,Light Snack,Medium,Savory / Umami,Casual Weeknight,Chicken,Italian,Chicken Pepperoni Pizza
+Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Rice-based,Mughlai (Veg),Veg Biryani
+Non-Veg,Very Hungry,Medium,Savory / Umami,Special Occasion,Mutton,Mughlai (Veg),Mutton Biryani
+Veg,Moderate Meal,Medium,Creamy / Rich,Special Occasion,Paneer / Tofu,Mughlai (Veg),Paneer Lababdar
+Non-Veg,Moderate Meal,Medium,Creamy / Rich,Special Occasion,Chicken,Mughlai (Veg),Murgh Musallam
+Veg,Moderate Meal,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,South Indian,Sambar Vada
+Veg,Moderate Meal,Medium,Tangy / Sour,Healthy / Low-Calorie,Rice-based,South Indian,Lemon Rice
+Non-Veg,Very Hungry,Very Spicy,Savory / Umami,Comfort Food,Chicken,South Indian,Chicken Chettinad
+Veg,Moderate Meal,Medium,Creamy / Rich,Comfort Food,Paneer / Tofu,Punjabi,Palak Paneer
+Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Rice-based,Punjabi,Tawa Pulao
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Casual Weeknight,Chicken,Punjabi,Kadai Chicken
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Noodles / Pasta,Italian,Macaroni and Cheese
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Noodles / Pasta,Italian,Spaghetti Bolognese
+Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Rajma Tacos
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Enchiladas
+Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Rice-based,Indo-Chinese,Veg Fried Rice
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Chicken Fried Rice
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Casual Weeknight,Prawns,Indo-Chinese,Prawn Fried Rice
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Quinoa Salad
+Non-Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Chicken,Mediterranean,Chicken Souvlaki
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Rice-based,Thai,Thai Veg Fried Rice
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Thai,Thai Chicken Fried Rice
+Veg,Moderate Meal,Mild,Light / Fresh,Quick & Easy,Lentils / Beans,Gujarati,Khandvi
+Veg,Moderate Meal,Mild,Sweet,Comfort Food,Bread-based,Maharashtrian,Puran Poli
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Mainly Vegetables,Chaat,Sev Puri
+Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Rice-based,Japanese (Veg),Edamame Rice
+Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Noodles / Pasta,Korean (Veg),Gochujang Pasta
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Chicken,Korean (Veg),Dak Galbi
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Mainly Vegetables,Continental,Cream of Mushroom Soup
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Comfort Food,Fish,Continental,Fish and Chips
+Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Bread-based,Sandwich,Grilled Cheese
+Non-Veg,Moderate Meal,Medium,Savory / Umami,Quick & Easy,Chicken,Sandwich,Chicken Tikka Sandwich
+Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Paneer / Tofu,Mughlai (Veg),Malai Kofta
+Non-Veg,Moderate Meal,Mild,Creamy / Rich,Special Occasion,Chicken,Mughlai (Veg),Murgh Korma
+Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Lentils / Beans,Punjabi,Dal Makhani
+Non-Veg,Very Hungry,Medium,Creamy / Rich,Comfort Food,Chicken,Punjabi,Butter Chicken
+Veg,Moderate Meal,Medium,Creamy / Rich,Casual Weeknight,Noodles / Pasta,Italian,Carbonara (Veg)
+Non-Veg,Moderate Meal,Medium,Creamy / Rich,Casual Weeknight,Noodles / Pasta,Italian,Carbonara
+Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Lentils / Beans,Mexican,Chipotle Bean Bowl
+Non-Veg,Very Hungry,Spicy,Tangy / Sour,Casual Weeknight,Chicken,Mexican,Chicken Burrito Bowl
+Veg,Very Hungry,Spicy,Savory / Umami,Casual Weeknight,Rice-based,Indo-Chinese,Schezwan Fried Rice
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Casual Weeknight,Chicken,Indo-Chinese,Schezwan Chicken
+Veg,Moderate Meal,Mild,Light / Fresh,Healthy / Low-Calorie,Mainly Vegetables,Mediterranean,Tabouleh
+Non-Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Fish,Mediterranean,Baked Cod
+Veg,Very Hungry,Spicy,Tangy / Sour,Comfort Food,Rice-based,South Indian,Tamarind Rice
+Non-Veg,Very Hungry,Spicy,Savory / Umami,Comfort Food,Chicken,South Indian,Chicken 65
+Veg,Moderate Meal,Spicy,Creamy / Rich,Experimental,Rice-based,Thai,Thai Green Curry Fried Rice
+Non-Veg,Moderate Meal,Spicy,Creamy / Rich,Experimental,Prawns,Thai,Prawn Green Curry
+Veg,Moderate Meal,Mild,Sweet,Comfort Food,Lentils / Beans,Gujarati,Gujarati Kadhi
+Veg,Light Snack,Medium,Tangy / Sour,Quick & Easy,Bread-based,Chaat,Dahi Vada
+Veg,Moderate Meal,Mild,Savory / Umami,Healthy / Low-Calorie,Noodles / Pasta,Japanese (Veg),Miso Ramen
+Non-Veg,Moderate Meal,Spicy,Savory / Umami,Experimental,Noodles / Pasta,Korean (Veg),Japchae (with beef)
+Veg,Moderate Meal,Mild,Creamy / Rich,Comfort Food,Rice-based,Continental,Baked Veg
+Non-Veg,Moderate Meal,Mild,Savory / Umami,Comfort Food,Chicken,Continental,Roast Chicken
