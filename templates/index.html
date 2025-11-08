@@ -510,10 +510,23 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData),
                 })
-                .then(response => response.json().then(data => ({ok: response.ok, data})))
-                .then(({ok, data}) => {
-                    if (!ok) {
-                        throw new Error(data.error || "Server error");
+                .then(response => {
+                    // *** THIS IS THE UPDATED PART ***
+                    // Check if the response is valid JSON before trying to parse it
+                    if (!response.ok) {
+                        // Throw an error that includes the status text (e.g., "Not Found")
+                        throw new Error(`Server returned an error: ${response.status} ${response.statusText}`);
+                    }
+                    const contentType = response.headers.get("content-type");
+                    if (!contentType || !contentType.includes("application/json")) {
+                        throw new Error("Received an invalid response from the server (not JSON).");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.error) {
+                        // Handle application-level errors (e.g., "No recommendations found")
+                        throw new Error(data.error);
                     }
 
                     if (data.recommendations && data.recommendations.length > 0) {
@@ -532,7 +545,6 @@
                             const card = document.createElement('div');
                             card.className = `rec-card ${cardClasses[index]}`;
                             
-                            // Build dish list HTML
                             let dishListHTML = '<ul class="dish-list">';
                             item.dishes.forEach(dish => {
                                 dishListHTML += `<li>${dish}</li>`;
@@ -570,27 +582,22 @@
                 const clickedCard = e.target.closest('.rec-card');
                 
                 if (!clickedCard) {
-                    // If user clicks outside a card, close all
                     document.querySelectorAll('.rec-card.active').forEach(card => {
                         card.classList.remove('active');
                     });
                     return;
                 }
 
-                // If it's already active, deactivate it
                 if (clickedCard.classList.contains('active')) {
                     clickedCard.classList.remove('active');
                 } else {
-                    // Deactivate all others
                     document.querySelectorAll('.rec-card.active').forEach(card => {
                         card.classList.remove('active');
                     });
-                    // Activate the clicked one
                     clickedCard.classList.add('active');
                 }
             });
         });
     </script>
-
 </body>
 </html>
